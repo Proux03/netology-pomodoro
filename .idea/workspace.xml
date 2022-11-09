@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56377f28-af52-4d86-9f9c-9802dff759a5" name="Changes" comment="completed lesson from webinar">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/PomodoroTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/PomodoroTimer.java" afterDir="false" />
     </list>
@@ -38,13 +37,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="PomodoroTimer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.PomodoroTimer" />
@@ -74,8 +73,18 @@
       <option name="presentableId" value="Default" />
       <updated>1667833761025</updated>
       <workItem from="1667833774931" duration="799000" />
-      <workItem from="1667911163854" duration="4587000" />
+      <workItem from="1667911163854" duration="4967000" />
+      <workItem from="1668000160448" duration="1512000" />
+      <workItem from="1668001700908" duration="93000" />
     </task>
+    <task id="LOCAL-00001" summary="completed lesson from webinar">
+      <created>1667921768295</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667921768295</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
