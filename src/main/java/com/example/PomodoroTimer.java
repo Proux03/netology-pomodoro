@@ -5,18 +5,16 @@ import java.util.concurrent.TimeUnit;
 
 public class PomodoroTimer {
 
-    public static int test = 0;
     public static int size = 30;
 
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Введите время работы и отдыха");
-        //test input: -w 2 -b 3 -c 3 -m 2
+        //test input: -w 2 -b 3 -c 3
         String[] input = new Scanner(System.in).nextLine().split(" ");
 
         int workTime = 1;
         int breakTime = 1;
         int count = 1;
-        int multiplier = 1;
 
         boolean isHelp = false;
 
@@ -25,7 +23,6 @@ public class PomodoroTimer {
                 case "-w" -> workTime = Integer.parseInt(input[++i]);
                 case "-b" -> breakTime = Integer.parseInt(input[++i]);
                 case "-c" -> count = Integer.parseInt(input[++i]);
-                case "-m" -> multiplier = Integer.parseInt(input[++i]);
                 case "--help" -> {
                     System.out.println(
                             "\n\nPomodoro - сделай свое время более эффективным\n");
@@ -49,7 +46,6 @@ public class PomodoroTimer {
 
         for(int i = 0; i <= count; i++) {
             timer(workTime, breakTime);
-            workTime = workTime * multiplier;
         }
 
         long endTime = System.currentTimeMillis();
@@ -67,26 +63,28 @@ public class PomodoroTimer {
         int length;
         int rep;
         length = 60 * time / size;
-        rep = 60 * time /length;
-        int stretchb = size / (3 * time);
+        rep = 60 * time / length;
+        int stretch = size / (3 * time);
         for(int i = 1; i <= rep; i++) {
             double x = i;
-            x = 1.0/3.0 *x;
+            x = 1.0 / 3.0 * x;
             x *= 10;
             x = Math.round(x);
             x /= 10;
-            double w = time *stretchb;
-            double percent = (x/w) *1000;
-            x /=stretchb;
+            double w = time * stretch;
+            double percent = (x / w) * 1000;
+            x /= stretch;
             x *= 10;
             x = Math.round(x);
             x /= 10;
             percent = Math.round(percent);
             percent /= 10;
-            System.out.print(process + percent+"% " + (" ").repeat(5 - (String.valueOf(percent).length())) +"[" + ("#").repeat(i) + ("-").repeat(rep - i)+"]    ( " + x +"min / " + time +"min )"+  "\r");
-            if(test == 0){
-                TimeUnit.SECONDS.sleep(length);
-            }
+            System.out.print(process + percent + "% " + (" ")
+                    .repeat(5 - (String.valueOf(percent).length())) +
+                    "[" + ("#").repeat(i) + ("-")
+                    .repeat(rep - i) +
+                    "]  ( " + x +"min / " + time +"min )"+  "\r");
+            TimeUnit.SECONDS.sleep(length);
         }
         System.out.println();
     }
